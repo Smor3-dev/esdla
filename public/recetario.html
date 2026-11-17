@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es-UY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Recetario · El Secreto de la Abuela</title>
+<meta name="description" content="Recetas con las salsas de El Secreto de la Abuela.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Calistoga&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="stylesheet" href="esdla.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header-in">
+    <a class="logo" href="index.html" aria-label="El Secreto de la Abuela, inicio"><img src="img/logo-rojo.png" alt="" width="600" height="349"></a>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="index.html#salsas">Salsas</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="#todas" aria-current="page">Recetario</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="header-acciones">
+      <a class="btn btn-rojo" data-wa="" href="index.html#contacto" aria-label="Pedí por WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5 5.3 15.6A8 8 0 1 1 8.6 18.6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.2 9.3c.3 1.9 1.6 3.4 3.6 4.2l1.2-1.1 1.8.9-.4 1.6c-3 .3-6.6-2.9-6.9-6l1.5-.6 1 1.7Z" fill="currentColor"/></svg>
+        <span class="btn-texto">Pedí por WhatsApp</span>
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-label="Abrir menú"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- LISTA DE RECETAS -->
+  <div id="vista-lista">
+    <section class="recetario-head">
+      <div class="wrap">
+        <span class="ceja">El recetario de la abuela</span>
+        <h1>Recetario</h1>
+        <p>Ideas para que una comida de todos los días valga la pena. Cada receta usa una de nuestras salsas y está probada en nuestra cocina.</p>
+        <div class="filtros" id="filtros" role="group" aria-label="Filtrar por salsa"></div>
+      </div>
+    </section>
+    <section class="seccion seccion-arriba-chica">
+      <div class="wrap">
+        <div class="recetas-grid" id="grid-recetas"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- DETALLE DE RECETA -->
+  <div id="vista-receta" hidden></div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-in">
+      <div class="footer-marca">
+        <a class="logo" href="index.html" aria-label="El Secreto de la Abuela, inicio"><img src="img/logo-crema.png" alt="" width="600" height="349"></a>
+        <p class="footer-lema">Cocina extraordinaria para días completamente normales.</p>
+      </div>
+      <div>
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="index.html#morron-zanahoria">Zanahoria &amp; Morrón</a></li>
+          <li><a href="index.html#sweet-jalapeno">Sweet Jalapeño</a></li>
+          <li><a href="index.html#verde-de-huerta">Verde de Huerta</a></li>
+          <li><a href="index.html#mermelada">Mermelada Picante</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>La marca</h4>
+        <ul>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="index.html#quienes-somos">Quiénes somos</a></li>
+          <li><a href="#todas">Recetario</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Seguinos</h4>
+        <ul>
+          <li><a data-ig="" href="index.html#contacto"></a></li>
+          <li><a data-wa="" href="index.html#contacto">WhatsApp</a></li>
+          <li><a href="index.html#contacto" data-email=""></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>Elaborado por El Secreto de la Abuela · Canelones, Uruguay</span>
+      <span>© <span data-anio="">2026</span> El Secreto de la Abuela</span>
+    </div>
+  </div>
+</footer>
+
+<script src="contenido.js"></script>
+<script src="esdla.js"></script>
+<script src="js/recetario.js"></script>
+</body>
+</html>

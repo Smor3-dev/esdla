@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="es-UY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El Secreto de la Abuela</title>
+<meta name="description" content="Salsas artesanales uruguayas hechas con verduras de verdad. Zanahoria & Morrón, Sweet Jalapeño y Verde de Huerta, y la nueva Mermelada Picante.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Calistoga&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="stylesheet" href="esdla.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header-in">
+    <a class="logo" href="#inicio" aria-label="El Secreto de la Abuela, inicio"><img src="img/logo-rojo.png" alt="" width="600" height="349"></a>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="#salsas">Salsas</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="recetario.html">Recetario</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="header-acciones">
+      <a class="btn btn-rojo" data-wa="" href="#contacto" aria-label="Pedí por WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5 5.3 15.6A8 8 0 1 1 8.6 18.6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.2 9.3c.3 1.9 1.6 3.4 3.6 4.2l1.2-1.1 1.8.9-.4 1.6c-3 .3-6.6-2.9-6.9-6l1.5-.6 1 1.7Z" fill="currentColor"/></svg>
+        <span class="btn-texto">Pedí por WhatsApp</span>
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-label="Abrir menú"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- BANNER: slider de 2 (salsas + Box ESDLA). Cambia cada 5 segundos -->
+  <section class="hero" aria-roledescription="carrusel" aria-label="Destacados">
+    <div class="hero-slides">
+      <div class="hero-slide activa" role="group" aria-roledescription="diapositiva" aria-label="1 de 2: Nuestras salsas">
+        <div class="wrap hero-in">
+          <div class="hero-copy">
+            <h1 class="hero-titulo">Cocina <span class="subrayado">extraordinaria</span> para días completamente normales.</h1>
+            <p class="hero-lead">¡Salsas hechas con verduras de verdad para realzar tus encuentros!</p>
+            <div class="hero-cta">
+              <a class="btn btn-papel" href="#salsas">Conocé las salsas</a>
+              <a class="btn btn-linea" href="recetario.html">Ver el recetario</a>
+            </div>
+          </div>
+          <div class="hero-visual hero-petacas">
+            <img src="img/petaca-sweet-jalapeno.webp" alt="Petaca de Salsa Sweet Jalapeño" width="458" height="900">
+            <img src="img/petaca-zanahoria-morron.webp" alt="Petaca de Salsa de Zanahoria & Morrón" width="458" height="900">
+            <img src="img/petaca-verde-de-huerta.webp" alt="Petaca de Salsa Verde de Huerta" width="458" height="900">
+            <svg class="hero-sello" viewBox="0 0 120 120" aria-hidden="true">
+              <defs><path id="anillo-hero" d="M60 60m-43 0a43 43 0 1 1 86 0a43 43 0 1 1-86 0"/></defs>
+              <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2"/>
+              <circle cx="60" cy="60" r="31" fill="none" stroke="currentColor" stroke-width="1.2"/>
+              <text class="sello-hero-anillo" fill="currentColor"><textPath href="#anillo-hero">RECETA ARTESANAL · HECHO EN URUGUAY · </textPath></text>
+              <g class="sello-centro"><g transform="translate(44 49.5) scale(1.185)"><rect width="27" height="18" fill="#FFFFFF"/><g fill="#0038A8"><rect y="2" width="27" height="2"/><rect y="6" width="27" height="2"/><rect y="10" width="27" height="2"/><rect y="14" width="27" height="2"/></g><rect width="10" height="10" fill="#FFFFFF"/><circle cx="5" cy="5" r="3" fill="none" stroke="#FCD116" stroke-width="1.5" stroke-dasharray=".7 .55"/><circle cx="5" cy="5" r="1.8" fill="#FCD116"/></g></g>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 2: Box ESDLA" aria-hidden="true" inert>
+        <div class="wrap hero-in">
+          <div class="hero-copy">
+            <h2 class="hero-titulo">Box ESDLA: una salsa de <span class="subrayado">cada sabor.</span></h2>
+            <p class="hero-lead">Zanahoria &amp; Morrón, Sweet Jalapeño y Verde de Huerta en una caja de madera, lista para regalar.</p>
+            <div class="hero-cta">
+              <button type="button" class="btn btn-papel" data-comprar="BOX-3" hidden>Comprar el Box online</button>
+              <a class="btn btn-papel" data-wa="¡Hola! Quiero pedir un Box ESDLA." href="#contacto" data-sin-online="BOX-3">Pedí tu Box por WhatsApp</a>
+              <a class="btn btn-linea" href="#salsas">Ver las salsas</a>
+            </div>
+          </div>
+          <div class="hero-visual hero-box">
+            <img src="img/box-esdla.webp" alt="Box ESDLA: caja de madera con las tres salsas de 200 ml" width="1200" height="892">
+            <svg class="hero-sello" viewBox="0 0 120 120" aria-hidden="true">
+              <defs><path id="anillo-box" d="M60 60m-43 0a43 43 0 1 1 86 0a43 43 0 1 1-86 0"/></defs>
+              <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2"/>
+              <circle cx="60" cy="60" r="31" fill="none" stroke="currentColor" stroke-width="1.2"/>
+              <text class="sello-hero-anillo" fill="currentColor"><textPath href="#anillo-box">BOX ESDLA · UNA SALSA DE CADA SABOR · </textPath></text>
+              <g class="sello-centro"><text class="sello-x3" x="60" y="69" text-anchor="middle" fill="currentColor">x3</text></g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-puntos">
+      <button class="hero-punto" type="button" aria-label="Ver diapositiva 1: Nuestras salsas" aria-current="true"><span></span></button>
+      <button class="hero-punto" type="button" aria-label="Ver diapositiva 2: Box ESDLA" aria-current="false"><span></span></button>
+    </div>
+  </section>
+
+  <div class="frases" aria-hidden="true">
+    <div class="frases-pista">
+      <div class="frases-grupo"><span>Salsas con/sin picante</span><span>Hecho en Uruguay</span><span>Elaboración artesanal</span><span>Sin colorantes</span><span>Salsas con/sin picante</span><span>Hecho en Uruguay</span><span>Elaboración artesanal</span><span>Sin colorantes</span><span>Salsas con/sin picante</span><span>Hecho en Uruguay</span><span>Elaboración artesanal</span><span>Sin colorantes</span></div>
+      <div class="frases-grupo"><span>Salsas con/sin picante</span><span>Hecho en Uruguay</span><span>Elaboración artesanal</span><span>Sin colorantes</span><span>Salsas con/sin picante</span><span>Hecho en Uruguay</span><span>Elaboración artesanal</span><span>Sin colorantes</span><span>Salsas con/sin picante</span><span>Hecho en Uruguay</span><span>Elaboración artesanal</span><span>Sin colorantes</span></div>
+    </div>
+  </div>
+
+  <!-- NUEVO LANZAMIENTO -->
+  <section class="seccion lanzamiento" id="mermelada" data-color="oliva">
+    <div class="wrap lanzamiento-in">
+      <div class="lanzamiento-visual textura">
+        <div class="lanzamiento-sello" id="sello-mermelada"></div>
+        <img src="img/mermelada-picante.webp" alt="Frasco de Mermelada Picante de 200 ml" width="612" height="900" loading="lazy">
+      </div>
+      <div class="lanzamiento-info">
+        <span class="nuevo">¡Nuevo lanzamiento!</span>
+        <span class="ceja">Receta n°004 · Frasco de 200 ml</span>
+        <h2>Mermelada Picante</h2>
+        <p class="lanzamiento-desc">Mermelada de semillas de pepino con manzana verde, lima, jengibre y jalapeño. Ideal para carnes y, sobre todo, para tablas de quesos.</p>
+        <div class="picor">
+          <span class="va-bien-titulo">Picante</span>
+          <span class="picor-escala" role="img" aria-label="Picante 6 de 10"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span></span>
+          <span class="picor-valor">6/10</span>
+          <span class="picor-nota">El doble que la Sweet Jalapeño</span>
+        </div>
+        <div class="boca">
+          <span class="va-bien-titulo">Cómo se siente en boca</span>
+          <ol class="boca-pasos">
+            <li class="paso-dulce"><strong>Dulce</strong><span>Arranca con un sabor dulce.</span></li>
+            <li class="paso-citrico"><strong>Cítrico</strong><span>En el medio sube la lima con el jengibre.</span></li>
+            <li class="paso-picante"><strong>Picante</strong><span>Cierra con un picor llamativo que no invade.</span></li>
+          </ol>
+          <p class="boca-pie">Un contraste de sensaciones muy interesante en boca.</p>
+        </div>
+        <div class="va-bien"><span class="va-bien-titulo">Va bien con</span>
+          <ul class="chips"><li>Tablas de quesos</li><li>Carnes</li></ul>
+        </div>
+        <div class="acordeon">
+          <details open><summary>La receta</summary><div class="acordeon-cuerpo" id="ing-mermelada"></div></details>
+        </div>
+        <div class="salsa-cta">
+          <button type="button" class="btn btn-color" data-comprar="MPI-200" hidden>Comprar online</button>
+          <a class="btn btn-linea-color" data-wa="¡Hola! Quiero pedir la Mermelada Picante." href="#contacto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5 5.3 15.6A8 8 0 1 1 8.6 18.6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.2 9.3c.3 1.9 1.6 3.4 3.6 4.2l1.2-1.1 1.8.9-.4 1.6c-3 .3-6.6-2.9-6.9-6l1.5-.6 1 1.7Z" fill="currentColor"/></svg>Pedila por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SALSAS -->
+  <section class="seccion" id="salsas">
+    <div class="wrap">
+      <div class="seccion-head">
+        <span class="ceja">Nuestras salsas</span>
+        <h2>Tres recetas para darle carácter a cualquier comida</h2>
+        <p>Petacas de 200 ml, aprox. 13 porciones cada una. Mirá qué lleva cada salsa, su información nutricional y con qué combina.</p>
+      </div>
+      <div class="salsas" id="lista-salsas"></div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="seccion nosotros" id="nosotros">
+    <div class="wrap nosotros-in">
+      <div>
+        <span class="ceja">Por qué la abuela</span>
+        <h2>La abuela es cuidado y criterio.</h2>
+        <div class="nosotros-texto">
+          <p>Saber exactamente qué le ponés a lo que comés.</p>
+          <p>Con esa filosofía hacemos cada salsa: recetas profesionales, con el cuidado, el sabor y la atención al detalle que tiene una abuela.</p>
+          <p>Cada una de nuestras petacas tiene el carácter que solo una abuela de familia puede lograr.</p>
+        </div>
+      </div>
+      <ul class="pruebas">
+        <li class="prueba" data-color="naranja">
+          <span class="prueba-icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.2 8.8c-2.6-2.6-5.6 0-7.4 3.4L4 20l7.8-3.8c3.4-1.8 6-4.8 3.4-7.4Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M15.5 8.5 19.5 4.5M16.4 6.6l.6-3.4M17.4 8.6l3.4-.6M9 13.5l1.5 1.5M7.4 16.4l1.2 1.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+          <div><h3>Verduras de verdad</h3><p>En una etiqueta, los ingredientes aparecen ordenados de mayor a menor cantidad. Por eso, que nuestras salsas tengan verduras entre sus primeros ingredientes significa que realmente son la base del producto.</p></div>
+        </li>
+        <li class="prueba" data-color="rojo">
+          <span class="prueba-icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5s-5.5 6.2-5.5 10a5.5 5.5 0 0 0 11 0c0-3.8-5.5-10-5.5-10Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M4.5 4.5l15 15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+          <div><h3>Sin colorantes</h3><p>El color de cada salsa lo ponen sus ingredientes.</p></div>
+        </li>
+        <li class="prueba" data-color="verde">
+          <span class="prueba-icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 10.5h15v4a5.5 5.5 0 0 1-5.5 5.5h-4a5.5 5.5 0 0 1-5.5-5.5v-4Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M2.5 10.5h19M9.5 7.5c0-1.2 1.2-1.6 1.2-3M13.5 7.5c0-1.2 1.2-1.6 1.2-3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+          <div><h3>Hechas en Uruguay</h3><p>Elaboramos con todos los permisos en una cocina habilitada en Ciudad de la Costa.</p></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="wrap equipo-in" id="quienes-somos">
+      <figure class="equipo-foto">
+        <img src="img/equipo.webp" alt="Carolina y Santiago en su puesto de feria, con las salsas de El Secreto de la Abuela" width="889" height="1100">
+        <figcaption>Nuestra primera feria</figcaption>
+      </figure>
+      <div class="equipo-texto">
+        <span class="ceja">Quiénes somos</span>
+        <h2>Santiago y Carolina</h2>
+        <p class="equipo-lead">Somos dos colegas de trabajo que emprendimos con un objetivo: rememorar las recetas de generaciones sin perder su esencia.</p>
+        <ul class="personas">
+          <li class="persona" data-color="verde">
+            <h3>Carolina</h3>
+            <p>Cocinera profesional, graduada del IGA.</p>
+          </li>
+          <li class="persona" data-color="naranja">
+            <h3>Santiago</h3>
+            <p>Licenciado en Comunicación, orientación Marketing y Publicidad.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECETARIO -->
+  <section class="seccion" id="recetas">
+    <div class="wrap">
+      <div class="seccion-head seccion-head-fila">
+        <div>
+          <span class="ceja">Del recetario</span>
+          <h2>Ideas para usarlas</h2>
+          <p>Recetas probadas en nuestra cocina, pensadas para cualquier día de la semana.</p>
+        </div>
+        <a class="link-flecha" href="recetario.html">Ver el recetario completo <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="recetas-grid" id="recetas-destacadas"></div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="seccion contacto contacto-borde" id="contacto">
+    <div class="wrap contacto-in">
+      <div>
+        <span class="ceja">Contacto</span>
+        <h2>Escribinos</h2>
+        <p class="contacto-lead">¿Querés probarlas, venderlas en tu local o tenés alguna consulta? Escribinos por WhatsApp o dejanos tu mensaje y te respondemos por mail.</p>
+        <ul class="canales">
+          <li class="canal">
+            <span class="canal-icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5 5.3 15.6A8 8 0 1 1 8.6 18.6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.2 9.3c.3 1.9 1.6 3.4 3.6 4.2l1.2-1.1 1.8.9-.4 1.6c-3 .3-6.6-2.9-6.9-6l1.5-.6 1 1.7Z" fill="currentColor"/></svg></span>
+            <div><div class="canal-label">WhatsApp</div><div class="canal-valor" id="wa-numero">Pedidos y consultas</div></div>
+            <a class="btn-mini" data-wa="" href="#contacto">Abrir chat</a>
+          </li>
+          <li class="canal">
+            <span class="canal-icono"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15.6 12v1.4a2.4 2.4 0 0 0 4.8 0V12a8.4 8.4 0 1 0-3.3 6.7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <div><div class="canal-label">Instagram</div><div class="canal-valor"><a data-ig="" href="#contacto"></a></div></div>
+            <a class="btn-mini" data-ig="" href="#contacto">Ver perfil</a>
+          </li>
+          <li class="canal">
+            <span class="canal-icono"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+            <div><div class="canal-label">Mail</div><div class="canal-valor" id="email-texto" data-email=""></div></div>
+            <button class="btn-mini" type="button" id="copiar-email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8.5" y="8.5" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15.5 8.5V6a1.5 1.5 0 0 0-1.5-1.5H6A1.5 1.5 0 0 0 4.5 6v8A1.5 1.5 0 0 0 6 15.5h2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>Copiar</span></button>
+          </li>
+        </ul>
+        <div class="restaurantes">
+          <h3>¿Tenés un restaurante o comercio?</h3>
+          <p>Trabajamos con botellas de 500 ml para cocina y petacas de 200 ml para reventa. Contanos de tu local y te pasamos la propuesta.</p>
+        </div>
+      </div>
+
+      <form class="form" id="form-contacto" name="contacto" method="POST" data-netlify="true" netlify-honeypot="empresa" novalidate>
+        <input type="hidden" name="form-name" value="contacto">
+        <p class="oculto-humano" aria-hidden="true"><label>No completar <input name="empresa" tabindex="-1" autocomplete="off"></label></p>
+        <h3 class="form-titulo">Dejanos tu mensaje</h3>
+        <div class="form-fila">
+          <div class="campo"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" type="text" autocomplete="name" required></div>
+          <div class="campo"><label for="f-email">Mail</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="form-fila">
+          <div class="campo"><label for="f-telefono">Teléfono <span class="opc">(opcional)</span></label><input id="f-telefono" name="telefono" type="tel" autocomplete="tel"></div>
+          <div class="campo">
+            <label for="f-motivo">Motivo</label>
+            <select id="f-motivo" name="motivo">
+              <option>Quiero comprar salsas</option>
+              <option>Tengo un restaurante o comercio</option>
+              <option>Otra consulta</option>
+            </select>
+          </div>
+        </div>
+        <div class="campo"><label for="f-mensaje">Mensaje</label><textarea id="f-mensaje" name="mensaje" required placeholder="Contanos qué necesitás"></textarea></div>
+        <div class="form-estado" id="form-estado" role="status" aria-live="polite" hidden></div>
+        <button class="btn btn-rojo" type="submit" id="f-enviar">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+
+<!-- Compra online: el precio lo calcula el servidor; el pago se hace en Mercado Pago -->
+<dialog class="compra" id="compra" aria-labelledby="compra-titulo">
+  <form class="compra-form" id="compra-form" novalidate>
+    <div class="compra-head">
+      <h2 id="compra-titulo">Comprar online</h2>
+      <button type="button" class="compra-cerrar" id="compra-cerrar" aria-label="Cerrar">&times;</button>
+    </div>
+    <p class="compra-producto"><strong id="compra-nombre"></strong><span id="compra-precio"></span></p>
+    <div class="form-fila">
+      <div class="campo"><label for="c-cantidad">Cantidad</label><select id="c-cantidad" name="cantidad"></select></div>
+      <div class="campo"><label for="c-telefono">Celular</label><input id="c-telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" placeholder="099 123 456" maxlength="20" required></div>
+    </div>
+    <div class="campo"><label for="c-nombre">Nombre y apellido</label><input id="c-nombre" name="nombre" autocomplete="name" maxlength="80" required></div>
+    <fieldset class="compra-entrega">
+      <legend>Entrega</legend>
+      <label class="opcion"><input type="radio" name="entrega" value="retiro" checked> Retiro (coordinamos por WhatsApp)</label>
+      <label class="opcion"><input type="radio" name="entrega" value="envio"> Envío a domicilio (te confirmamos el costo)</label>
+    </fieldset>
+    <div class="campo" id="c-direccion-campo" hidden><label for="c-direccion">Dirección</label><input id="c-direccion" name="direccion" autocomplete="street-address" maxlength="160"></div>
+    <div class="campo"><label for="c-notas">Notas <span class="opc">(opcional)</span></label><textarea id="c-notas" name="notas" maxlength="300" rows="2"></textarea></div>
+    <p class="compra-total">Total <strong id="compra-total"></strong></p>
+    <div class="form-estado" id="compra-estado" role="status" aria-live="polite" hidden></div>
+    <button class="btn btn-rojo" type="submit" id="compra-pagar">Ir a pagar con Mercado Pago</button>
+    <p class="compra-legal">El pago se hace en Mercado Pago. Nosotros no vemos ni guardamos los datos de tu tarjeta.</p>
+  </form>
+</dialog>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-in">
+      <div class="footer-marca">
+        <a class="logo" href="#inicio" aria-label="El Secreto de la Abuela, inicio"><img src="img/logo-crema.png" alt="" width="600" height="349"></a>
+        <p class="footer-lema">Cocina extraordinaria para días completamente normales.</p>
+      </div>
+      <div>
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="#morron-zanahoria">Zanahoria &amp; Morrón</a></li>
+          <li><a href="#sweet-jalapeno">Sweet Jalapeño</a></li>
+          <li><a href="#verde-de-huerta">Verde de Huerta</a></li>
+          <li><a href="#mermelada">Mermelada Picante</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>La marca</h4>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#quienes-somos">Quiénes somos</a></li>
+          <li><a href="recetario.html">Recetario</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Seguinos</h4>
+        <ul>
+          <li><a data-ig="" href="#contacto"></a></li>
+          <li><a data-wa="" href="#contacto">WhatsApp</a></li>
+          <li><a href="#contacto" data-email=""></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>Elaborado por El Secreto de la Abuela · Canelones, Uruguay</span>
+      <span>© <span data-anio="">2026</span> El Secreto de la Abuela</span>
+    </div>
+  </div>
+</footer>
+
+<script src="contenido.js"></script>
+<script src="esdla.js"></script>
+<script src="js/home.js"></script>
+<script type="module" src="js/tienda.js"></script>
+</body>
+</html>

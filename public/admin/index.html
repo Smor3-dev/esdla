@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es-UY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Panel · El Secreto de la Abuela</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Calistoga&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="top">
+  <img src="../img/logo-rojo.png" alt="El Secreto de la Abuela" width="600" height="349" class="top-logo">
+  <span class="top-titulo">Panel</span>
+  <button type="button" class="btn btn-sec" id="salir" hidden>Cerrar sesión</button>
+</header>
+
+<div class="aviso" id="aviso" role="status" aria-live="polite" hidden></div>
+
+<!-- Login -->
+<main class="vista" id="vista-login" hidden>
+  <form class="tarjeta login" id="form-login" novalidate>
+    <h1>Ingresar</h1>
+    <label for="l-pass">Contraseña</label>
+    <input id="l-pass" name="password" type="password" autocomplete="current-password" required maxlength="200">
+    <button class="btn" type="submit">Entrar</button>
+    <p class="error" id="login-error" hidden></p>
+  </form>
+</main>
+
+<!-- App -->
+<main class="vista" id="vista-app" hidden>
+  <nav class="tabs" role="tablist" aria-label="Secciones">
+    <button type="button" role="tab" class="tab" data-tab="caja" aria-selected="true">Caja</button>
+    <button type="button" role="tab" class="tab" data-tab="pedidos" aria-selected="false">Pedidos web</button>
+    <button type="button" role="tab" class="tab" data-tab="stock" aria-selected="false">Stock</button>
+    <button type="button" role="tab" class="tab" data-tab="integraciones" aria-selected="false">Integraciones</button>
+  </nav>
+
+  <section class="panel" id="panel-caja" role="tabpanel">
+    <div class="caja">
+      <div class="tarjeta">
+        <h2>Productos</h2>
+        <div class="productos" id="caja-productos"></div>
+      </div>
+      <div class="tarjeta">
+        <h2>Cobro</h2>
+        <ul class="carrito" id="caja-carrito"></ul>
+        <p class="total">Total <strong id="caja-total">$ 0</strong></p>
+        <fieldset class="metodos">
+          <legend>Cómo paga</legend>
+          <label><input type="radio" name="metodo" value="qr_static" checked> QR impreso del puesto</label>
+          <label><input type="radio" name="metodo" value="qr_dynamic"> QR en esta pantalla</label>
+          <label id="metodo-point" hidden><input type="radio" name="metodo" value="point"> Point (tarjeta)</label>
+        </fieldset>
+        <div class="fila">
+          <button type="button" class="btn" id="caja-cobrar" disabled>Cobrar</button>
+          <button type="button" class="btn btn-sec" id="caja-limpiar">Vaciar</button>
+        </div>
+        <div class="cobro" id="caja-cobro" hidden>
+          <p class="cobro-estado" id="cobro-estado"></p>
+          <img id="cobro-qr" alt="Código QR para pagar con Mercado Pago" width="360" height="360" hidden>
+          <button type="button" class="btn btn-sec" id="cobro-cancelar">Cancelar cobro</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-pedidos" role="tabpanel" hidden>
+    <div class="tarjeta">
+      <div class="fila fila-entre"><h2>Pedidos web pagados</h2><button type="button" class="btn btn-sec" id="pedidos-recargar">Actualizar</button></div>
+      <div id="pedidos-lista" class="pedidos"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-stock" role="tabpanel" hidden>
+    <div class="tarjeta">
+      <h2>Stock y Mercado Libre</h2>
+      <p class="ayuda">El stock de acá es el único: se descuenta con cada venta web, de caja y de Mercado Libre, y se copia a tus publicaciones vinculadas.</p>
+      <div class="tabla-scroll"><table class="tabla" id="stock-tabla">
+        <thead><tr><th>Producto</th><th>Stock</th><th>Disponible</th><th>Publicación ML</th><th></th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-integraciones" role="tabpanel" hidden>
+    <div class="grid-2">
+      <div class="tarjeta">
+        <h2>Mercado Libre</h2>
+        <dl class="datos" id="int-ml"></dl>
+        <a class="btn" id="ml-conectar" href="/api/admin/ml/connect">Conectar Mercado Libre</a>
+      </div>
+      <div class="tarjeta">
+        <h2>Mercado Pago</h2>
+        <dl class="datos" id="int-mp"></dl>
+        <form id="form-pos" class="form-pos" hidden novalidate>
+          <h3>Configurar la caja (una sola vez)</h3>
+          <label>Nombre del puesto <input name="storeName" value="El Secreto de la Abuela" maxlength="60" required></label>
+          <div class="fila">
+            <label>Calle <input name="streetName" maxlength="80" required></label>
+            <label>Número <input name="streetNumber" inputmode="numeric" maxlength="6" required></label>
+          </div>
+          <div class="fila">
+            <label>Ciudad <input name="cityName" value="Ciudad de la Costa" maxlength="60" required></label>
+            <label>Departamento <input name="stateName" value="Canelones" maxlength="60" required></label>
+          </div>
+          <div class="fila">
+            <label>Latitud <input name="latitude" inputmode="decimal" placeholder="-34.8" required></label>
+            <label>Longitud <input name="longitude" inputmode="decimal" placeholder="-55.9" required></label>
+          </div>
+          <button class="btn" type="submit">Crear sucursal y caja</button>
+        </form>
+        <div class="point" id="point">
+          <h3>Point (opcional)</h3>
+          <button type="button" class="btn btn-sec" id="point-buscar">Buscar terminales Point</button>
+          <ul class="terminales" id="point-lista" hidden></ul>
+        </div>
+      </div>
+      <div class="tarjeta">
+        <h2>Sincronización</h2>
+        <dl class="datos" id="int-sync"></dl>
+        <button type="button" class="btn btn-sec" id="sync-ahora">Sincronizar ahora</button>
+        <pre class="reporte" id="sync-reporte" hidden></pre>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script type="module" src="admin.js"></script>
+</body>
+</html>
