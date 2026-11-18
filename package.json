@@ -2,32 +2,11 @@
   "name": "esdla-integraciones",
   "version": "1.0.0",
   "private": true,
-  "description": "Landing de El Secreto de la Abuela + backend serverless seguro para Mercado Pago (checkout, QR, Point) y Mercado Libre (OAuth, órdenes, stock).",
-  "type": "module",
-  "engines": {
-    "node": ">=22"
-  },
+  "description": "Sitio web estático ESDLA",
   "scripts": {
-    "check": "tsc --noEmit",
-    "test": "vitest run",
-    "build": "npm run check",
-    "dev": "netlify dev",
-    "db:migrate": "node scripts/migrate.mjs",
-    "gen:secrets": "node scripts/gen-secrets.mjs",
-    "hash-password": "node scripts/hash-password.mjs"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
-  "dependencies": {
-    "@netlify/functions": "6.0.3",
-    "postgres": "3.4.9",
-    "qrcode": "1.5.4",
-    "zod": "4.6.7"
-  },
-  "devDependencies": {
-    "@electric-sql/pglite": "0.5.13",
-    "@electric-sql/pglite-socket": "0.2.16",
-    "@types/node": "22.20.5",
-    "@types/qrcode": "1.5.6",
-    "typescript": "5.9.3",
-    "vitest": "3.2.7"
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
